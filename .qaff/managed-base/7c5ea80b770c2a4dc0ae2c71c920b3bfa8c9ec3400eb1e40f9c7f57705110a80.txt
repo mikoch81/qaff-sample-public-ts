@@ -1,0 +1,18 @@
+{
+  "name": "@client-demo-public-ts-qa/demo-todo-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test --config=../../../playwright.config.ts --project=api",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@client-demo-public-ts-qa/framework-core": "*",
+    "@client-demo-public-ts-qa/framework-api": "*"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  }
+}

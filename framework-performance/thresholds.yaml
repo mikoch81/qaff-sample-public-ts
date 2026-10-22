@@ -1,0 +1,72 @@
+# Provider-neutral performance threshold model.
+# Advisory configuration only.
+#
+# Not enforced by npm test, qaff verify, or generated CI by default.
+# The opt-in CI strict gate (ci.<provider>.strictQualityGate) reads this
+# file through `qaff evaluate-quality-impact --strict`.
+
+version: 1
+status: advisory
+enforcement: none
+appliesTo: provider-neutral
+
+defaults:
+  smoke:
+    description: Single-user provider sanity budget. Advisory only.
+    metrics:
+      responseTime:
+        p95Ms:
+          max: 500
+        p99Ms:
+          max: 1000
+      errorRate:
+        percent:
+          max: 0.0
+      throughput:
+        requestsPerSecond:
+          min: 1
+      sample:
+        requests:
+          min: 1
+        durationSeconds:
+          min: 1
+  regression:
+    description: Future baseline comparison budget. Advisory only.
+    metrics:
+      responseTime:
+        p95Ms:
+          max: 800
+        p99Ms:
+          max: 1500
+      errorRate:
+        percent:
+          max: 0.5
+      throughput:
+        requestsPerSecond:
+          min: 10
+      relativeRegression:
+        percent:
+          max: 20
+  load:
+    description: Future capacity review target. Report-only advisory target.
+    metrics:
+      responseTime:
+        p95Ms:
+          max: 1500
+        p99Ms:
+          max: 3000
+      errorRate:
+        percent:
+          max: 1.0
+      throughput:
+        requestsPerSecond:
+          min: 100
+
+# Optional per-app overrides go here. Keep this provider-neutral.
+# apps:
+#   demo-ecommerce:
+#     smoke:
+#       metrics:
+#         responseTime:
+#           p95Ms:
+#             max: 300

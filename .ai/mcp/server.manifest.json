@@ -1,0 +1,78 @@
+{
+  "name": "qaff-local-mcp",
+  "version": "0.3.0",
+  "protocol": "mcp-jsonrpc-stdio",
+  "entrypoint": ".ai/mcp/server/server.js",
+  "capabilities": {
+    "readOnly": false,
+    "writesJira": true,
+    "writesZephyr": true,
+    "writesXray": true,
+    "writesTestRail": true,
+    "writesRepository": false
+  },
+  "tools": [
+    {
+      "name": "read_test_results",
+      "version": "1.1.0",
+      "readOnly": true,
+      "requiredEnv": []
+    },
+    {
+      "name": "compare_performance_baseline",
+      "version": "1.1.0",
+      "readOnly": true,
+      "requiredEnv": []
+    },
+    {
+      "name": "attach_report_to_jira",
+      "version": "2.0.0",
+      "readOnly": false,
+      "requiredEnv": [
+        "JIRA_BASE_URL",
+        "JIRA_USER",
+        "JIRA_TOKEN"
+      ]
+    },
+    {
+      "name": "create_zephyr_execution",
+      "version": "1.1.0",
+      "readOnly": false,
+      "requiredEnv": [
+        "ZEPHYR_BASE_URL",
+        "ZEPHYR_TOKEN"
+      ]
+    },
+    {
+      "name": "sync_xray_results",
+      "version": "1.0.0",
+      "readOnly": false,
+      "requiredEnv": [
+        "XRAY_CLIENT_ID",
+        "XRAY_CLIENT_SECRET"
+      ]
+    },
+    {
+      "name": "sync_testrail_results",
+      "version": "1.0.0",
+      "readOnly": false,
+      "requiredEnv": [
+        "TESTRAIL_URL",
+        "TESTRAIL_USER",
+        "TESTRAIL_API_KEY"
+      ]
+    },
+    {
+      "name": "inspect_repository_structure",
+      "version": "1.1.0",
+      "readOnly": true,
+      "requiredEnv": []
+    },
+    {
+      "name": "suggest_test_implementation",
+      "version": "1.2.0",
+      "readOnly": true,
+      "requiredEnv": []
+    }
+  ]
+}

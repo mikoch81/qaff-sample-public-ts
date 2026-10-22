@@ -1,0 +1,13 @@
+{
+  "_comment_1": "Example only. MCP client config formats vary by tool.",
+  "_comment_2": "The local server exists at .ai/mcp/server/server.js; the Zephyr, Jira, Xray and TestRail tools use dry-run by default and optional live mode when explicitly enabled. The generated runtime stores no credentials.",
+  "mcpServers": {
+    "qaff-local": {
+      "command": "node",
+      "args": [".ai/mcp/server/server.js"],
+      "env": {
+        "QAFF_REPO_ROOT": "."
+      }
+    }
+  }
+}

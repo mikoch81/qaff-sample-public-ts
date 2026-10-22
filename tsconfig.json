@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist"
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./framework-core"
+    },
+    {
+      "path": "./framework-web"
+    },
+    {
+      "path": "./framework-api"
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

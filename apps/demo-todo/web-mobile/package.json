@@ -1,0 +1,18 @@
+{
+  "name": "@client-demo-public-ts-qa/demo-todo-web-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test --config=../../../playwright.config.ts",
+    "test:headed": "playwright test --config=../../../playwright.config.ts --headed",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@client-demo-public-ts-qa/framework-core": "*",
+    "@client-demo-public-ts-qa/framework-web": "*"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "typescript": "^5.9.3"
+  }
+}

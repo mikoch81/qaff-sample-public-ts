@@ -1,0 +1,306 @@
+{
+  "generatorVersion": "0.3.0",
+  "blueprintId": "ts-npm-playwright",
+  "blueprintVersion": "0.1.0",
+  "javaVersion": null,
+  "nodeVersion": "20",
+  "projectName": "client-demo-public-ts-qa",
+  "packs": {
+    "qualityImpact": true,
+    "aiAgent": false,
+    "mcpToolkit": true
+  },
+  "ci": {
+    "jenkins": false,
+    "githubActions": true,
+    "azurePipelines": false,
+    "gitlabCi": false,
+    "jenkinsStrictQualityGate": false,
+    "githubActionsStrictQualityGate": false,
+    "azurePipelinesStrictQualityGate": false,
+    "gitlabCiStrictQualityGate": false,
+    "jenkinsTrendReport": false,
+    "githubActionsTrendReport": false,
+    "azurePipelinesTrendReport": false,
+    "gitlabCiTrendReport": false,
+    "jenkinsStrictTrendGate": false,
+    "githubActionsStrictTrendGate": false,
+    "azurePipelinesStrictTrendGate": false,
+    "gitlabCiStrictTrendGate": false,
+    "githubActionsAllureReport": true
+  },
+  "performance": {
+    "providers": [
+      "k6"
+    ]
+  },
+  "failureAnalysisAi": null,
+  "apps": [
+    {
+      "id": "demo-todo",
+      "layers": [
+        "web-desktop",
+        "web-mobile",
+        "api"
+      ],
+      "web": {
+        "target": "external",
+        "baseUrl": "https://demo.playwright.dev/todomvc",
+        "engine": "playwright",
+        "smoke": {
+          "headingSelector": "h1",
+          "headingText": "todos",
+          "itemSelector": ".new-todo"
+        }
+      }
+    }
+  ],
+  "generatedBy": "qaff",
+  "deterministic": true,
+  "generatedFiles": {
+    "schema": "qaff/managed-snapshot/v1",
+    "algorithm": "sha256",
+    "files": [
+      {
+        "path": ".ai/mcp/mcp-config.example.json",
+        "sha256": "e988e383afc86a0b278b765d244df55417a2ab0494fdf5b4b4d81b369aa8d9bd"
+      },
+      {
+        "path": ".ai/mcp/performance-results-mcp.md",
+        "sha256": "d847610da7725a9493dbcb990ec794a5c14d6c675b52a579f4e741b551ccc51f"
+      },
+      {
+        "path": ".ai/mcp/README.md",
+        "sha256": "2ac168783592504cf2ea48cc8857e9e6cadd2db5f68e2442d6175ec38dcb0789"
+      },
+      {
+        "path": ".ai/mcp/repository-inspection-mcp.md",
+        "sha256": "33d7f9d3c96cf5238c47040287ac02bc62b09211963efafd6aa4449102e3f07a"
+      },
+      {
+        "path": ".ai/mcp/server.manifest.json",
+        "sha256": "39108476e81c187fa10e8fd81196ab62aa0bf83c8896e95b81c766637348d9bd"
+      },
+      {
+        "path": ".ai/mcp/server/server.js",
+        "sha256": "eb05474f5931e084d2f39f6f66a67277bb1ba94f44e22b909cf37e02c67f8495"
+      },
+      {
+        "path": ".ai/mcp/test-results-mcp.md",
+        "sha256": "27dc628319ed31bead70c8bfe6b927d9d885d4e22e6ef4c14af1ae56e0f67131"
+      },
+      {
+        "path": ".ai/mcp/tools/attach-report-to-jira.tool.md",
+        "sha256": "0e7bfd36e96af5b7e32845222c3a59a3fd2df3513507f149459acdd21a13d828"
+      },
+      {
+        "path": ".ai/mcp/tools/compare-performance-baseline.tool.md",
+        "sha256": "db4770c066873437b2549a501aca2f607affe404e84b2eca1b2b288ad773185d"
+      },
+      {
+        "path": ".ai/mcp/tools/create-zephyr-execution.tool.md",
+        "sha256": "8b1c3487cfb76229995e3380d2525b9c6ef45cf81826ee1ea560eea99fcf3cb5"
+      },
+      {
+        "path": ".ai/mcp/tools/inspect-repository-structure.tool.md",
+        "sha256": "4bcee0ef832744dc81dec53a094db1de09952ba0279017bead730479c65be786"
+      },
+      {
+        "path": ".ai/mcp/tools/read-test-results.tool.md",
+        "sha256": "bf76bc46ae033353de79eb9a419a2fca13e197682b7e3ab4b355eca039397d1f"
+      },
+      {
+        "path": ".ai/mcp/tools/suggest-test-implementation.tool.md",
+        "sha256": "e8bc36b87aa24c3d25c9029e00543ab2c0ab70093d9e58df31bba3da2cf68c96"
+      },
+      {
+        "path": ".ai/mcp/tools/sync-testrail-results.tool.md",
+        "sha256": "3ab12f862e95b814415762df18ea5daea83074b3964bee156c43db12b972f05f"
+      },
+      {
+        "path": ".ai/mcp/tools/sync-xray-results.tool.md",
+        "sha256": "7b746facdd14aa1ddcfa8ca1b5953e7ae1fe6deb7db3983efeabcd3b355f08f2"
+      },
+      {
+        "path": ".github/workflows/playwright.yml",
+        "sha256": "0fcb401acc5e7b9cc309ab8bec8796316aaaf2b4b52c8e1edbf45e77538a5a61"
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "8ae1b14af209e696e0f75e5b8b552bb0f85c576788aa055165176649a0f72853"
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "b4090a3c52eb629391c274e74877a0ed35daf300dc0ce92bb8060cfaf9e89a19"
+      },
+      {
+        "path": "apps/demo-todo/api/package.json",
+        "sha256": "7c5ea80b770c2a4dc0ae2c71c920b3bfa8c9ec3400eb1e40f9c7f57705110a80"
+      },
+      {
+        "path": "apps/demo-todo/api/tests/health.api.spec.ts",
+        "sha256": "16502667e3ebe1ab4ea5beb97189874151042b1ece1cafa8382f69d9b75bb4c4"
+      },
+      {
+        "path": "apps/demo-todo/api/tsconfig.json",
+        "sha256": "45f8853bd0ec73f1b21bbbd465308c53a9e650f5aba286ff21f97ce81c888848"
+      },
+      {
+        "path": "apps/demo-todo/web-desktop/package.json",
+        "sha256": "54c985135268dbc34ead9eb58540f87fc7c2290c90e3fb4603dcdc0d32ae7ba1"
+      },
+      {
+        "path": "apps/demo-todo/web-desktop/pages/DemoTodoHomePage.ts",
+        "sha256": "4f64f4f32f65cb20d989d3b659a2457df06014285939cbb2047d14b0f10e8216"
+      },
+      {
+        "path": "apps/demo-todo/web-desktop/tests/smoke.spec.ts",
+        "sha256": "b94217b73e32eeb3ba49715034f29533bfada17c65f0d7b1be80d5aaca7e8155"
+      },
+      {
+        "path": "apps/demo-todo/web-desktop/tsconfig.json",
+        "sha256": "975688d879e6c5db139b6a981b658ac5b267b763b49138d442eb543dbd627c48"
+      },
+      {
+        "path": "apps/demo-todo/web-mobile/package.json",
+        "sha256": "034f29ea90b215ae3e2d219be1dbe6afa07f0e495ecb46119d6ceae27e1115e9"
+      },
+      {
+        "path": "apps/demo-todo/web-mobile/pages/DemoTodoMobileHomePage.ts",
+        "sha256": "ab2cbbcceb1fc6e7936db55bd02698b4b4667ab6ccc0ea5eb153c326bc1ec970"
+      },
+      {
+        "path": "apps/demo-todo/web-mobile/tests/smoke.spec.ts",
+        "sha256": "8e6d490a3b9b8eaa387aeb6c9b3c09bbd9be01217d322bd78a85283b29117426"
+      },
+      {
+        "path": "apps/demo-todo/web-mobile/tsconfig.json",
+        "sha256": "975688d879e6c5db139b6a981b658ac5b267b763b49138d442eb543dbd627c48"
+      },
+      {
+        "path": "CLAUDE.md",
+        "sha256": "8abc6a6433b73628df2f0371a3fe94615ee14074c6bfa33cd215adc0996fb1c9"
+      },
+      {
+        "path": "docs/HOW_TO_USE_ALLURE.md",
+        "sha256": "c26fab5dd838d1238ad6beb968326d82cd8cf32804b145e71e649fde15576483"
+      },
+      {
+        "path": "docs/performance-strategy.md",
+        "sha256": "a1e846e8718a3bd0a8dd3f1d314d18447663b246fa53ab40e3407b21a9f4adb0"
+      },
+      {
+        "path": "docs/quality-gates.md",
+        "sha256": "32f066d26931ff32510a71c36bd88d6453d7cccb7cae88c08bbfe86feab7a440"
+      },
+      {
+        "path": "framework-api/package.json",
+        "sha256": "fbf99bab0acceb2c1495f64bcecab1ccb81de1639e713b9e8b2414a18689e7c5"
+      },
+      {
+        "path": "framework-api/README.md",
+        "sha256": "b60eddae87c6674b87c02d64b448e66787f45d1b449cb0b416850772c44496c1"
+      },
+      {
+        "path": "framework-api/src/ApiTestSupport.ts",
+        "sha256": "c429bbb735884d682615fbf56da98fbb447b089d73ff8eaec2a8045765f72617"
+      },
+      {
+        "path": "framework-api/src/index.ts",
+        "sha256": "731ed9886e0761c166c4301182ac8d48f29c3d672e8e715ff9de664f53556858"
+      },
+      {
+        "path": "framework-api/tsconfig.json",
+        "sha256": "be40488ff29389cc61f905aa230429f3e2c8d78896dfee4559156b06451b5a68"
+      },
+      {
+        "path": "framework-core/package.json",
+        "sha256": "f8386abacb0892ea2d224facc39b8525954b83cf498f0ceeb53df4cd225be89c"
+      },
+      {
+        "path": "framework-core/src/helpers/waitHelper.ts",
+        "sha256": "60de94ee0bb758f23e6e9d158649590d387db58219a468f3e5e773a6534f217d"
+      },
+      {
+        "path": "framework-core/src/index.ts",
+        "sha256": "0e4a6c84f31c37166d2f1b4f0daa3092c85dd2ed4516fc7463ad98b7a3872339"
+      },
+      {
+        "path": "framework-core/tsconfig.json",
+        "sha256": "70048616b1ffca136e61a5687db53b61b36d2493bfd0aab32406bf02db0b1535"
+      },
+      {
+        "path": "framework-performance/baseline/README.md",
+        "sha256": "658f5b07b54a4d7f3d173e11e36117f7540aab14fd3727a79e7c0a3e9f5fd8ea"
+      },
+      {
+        "path": "framework-performance/providers/k6/input/README.md",
+        "sha256": "6a0588ca00e196088bfc05145f2897765cc807adc14da2a35174978d18f9f670"
+      },
+      {
+        "path": "framework-performance/providers/k6/README.md",
+        "sha256": "e38903a282e62b0fc07e44f8a406f7da4d5676f38448516259022fffa059b8c5"
+      },
+      {
+        "path": "framework-performance/README.md",
+        "sha256": "51d7953ff1e985312dc699378c8289c195d19abc5a0de052a1e6070450e05d36"
+      },
+      {
+        "path": "framework-performance/reports/history/README.md",
+        "sha256": "37670b14de99231ea0c026c92fc7f1d3819626e49e2c91939f239b20c231e99a"
+      },
+      {
+        "path": "framework-performance/reports/README.md",
+        "sha256": "a0385aa0143807f314965772b0ae0a2eee79f525449f922e114e93d39220fe72"
+      },
+      {
+        "path": "framework-performance/thresholds.yaml",
+        "sha256": "0cad045a4c8c91da094bc63a6ed80b8832212ec34672fc5a13214934c27eee77"
+      },
+      {
+        "path": "framework-web/package.json",
+        "sha256": "7b8ea1261493be140397f0caf949c27a66bd4bfd5d9faf00c4130526d15c4733"
+      },
+      {
+        "path": "framework-web/src/BasePage.ts",
+        "sha256": "4c75c0697d597c893d2e9e4b6e3cc8397c720002bb82dd473c606306926b2169"
+      },
+      {
+        "path": "framework-web/src/index.ts",
+        "sha256": "e0be62fa6e8e61f8e6fca7064ca69babcd1b3dcbcf8983cad6d8d0f643c7c5c3"
+      },
+      {
+        "path": "framework-web/src/PageComponent.ts",
+        "sha256": "0ec15d8f76b4628738e054622795ea5d6b84085ebb172705e84e1eb02553a152"
+      },
+      {
+        "path": "framework-web/tsconfig.json",
+        "sha256": "be40488ff29389cc61f905aa230429f3e2c8d78896dfee4559156b06451b5a68"
+      },
+      {
+        "path": "package.json",
+        "sha256": "64e3a0197e7c10b1f1e23bfd8790fc1c1ee5b657d9cd89d25b085029e7008b26"
+      },
+      {
+        "path": "playwright.config.ts",
+        "sha256": "5e6b65dfa17007fdf364ce209c56aae3609c675a98a0f2a75087fd03a6315540"
+      },
+      {
+        "path": "README.md",
+        "sha256": "af706d5ffaa4f762d5722a983dcf08897e2d3b254e31da3c5b435fa9fddace54"
+      },
+      {
+        "path": "scripts/run-k6-import-smoke.ps1",
+        "sha256": "310fd28826360f0b2bf80404504c3f822489b6e7e964b28829cfe2bc2d9d7597"
+      },
+      {
+        "path": "scripts/run-k6-import-smoke.sh",
+        "sha256": "4f0993d6bc29e4a7b70832097d1e2bdb4b5e1920132a602aa1618bab541b8e4a"
+      },
+      {
+        "path": "tsconfig.json",
+        "sha256": "112839f8d236f7c5afde7ad2d05549ebdb41d7a06fa4ed156e19db7d36f6eaec"
+      }
+    ]
+  }
+}

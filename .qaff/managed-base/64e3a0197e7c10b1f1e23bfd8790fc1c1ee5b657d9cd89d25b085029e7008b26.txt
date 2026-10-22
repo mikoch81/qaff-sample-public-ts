@@ -1,0 +1,29 @@
+{
+  "name": "@client-demo-public-ts-qa/qa",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "framework-core",
+    "framework-web",
+    "framework-api",
+    "apps/*/web-desktop",
+    "apps/*/web-mobile",
+    "apps/*/api"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "typecheck": "tsc --build && npm run typecheck --workspaces --if-present",
+    "pretest": "npm run typecheck",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "allure:report": "node -e \"require('fs').rmSync('allure-report',{recursive:true,force:true})\" && allure generate allure-results -o allure-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^20.19.43",
+    "allure": "3.20.1",
+    "allure-playwright": "3.11.1",
+    "typescript": "^5.9.3"
+  }
+}
