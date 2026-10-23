@@ -287,7 +287,7 @@
       },
       {
         "path": "README.md",
-        "sha256": "af706d5ffaa4f762d5722a983dcf08897e2d3b254e31da3c5b435fa9fddace54"
+        "sha256": "df1f3139f37964eef1ecf1635cd833e806352e09ce9c4461cfe4e5b149d22754"
       },
       {
         "path": "scripts/run-k6-import-smoke.ps1",

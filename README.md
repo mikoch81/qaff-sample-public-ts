@@ -13,8 +13,9 @@ npm test               # builds + typechecks the workspace, then runs Playwright
 npm run test:report    # open the HTML report of the last run
 ```
 
-The generated smoke tests run fully offline against bundled `file://` HTML
-fixtures — the first `npm test` should be green with no application running.
+The web smokes of `demo-todo` drive the configured external URL
+(see *External web targets* below); the remaining smokes run offline against bundled
+`file://` HTML fixtures.
 
 ## Layout
 
@@ -33,6 +34,18 @@ Each app package holds `pages/` (page objects), `tests/` (specs) and
 Replace the `file://` fixture URL in a spec (or set a `baseURL` in
 [playwright.config.ts](playwright.config.ts)) and drive your deployed app.
 Keep the offline smoke tests — they protect the framework itself.
+
+### External web targets
+
+`npm test` runs the web smoke of these apps against the configured URL, so it fails until
+that URL is reachable — replace a placeholder such as `https://example.invalid` first:
+
+- `demo-todo` → `https://demo.playwright.dev/todomvc`
+
+Override at runtime with `QAFF_WEB_BASE_URL` (URL) and `QAFF_WEB_SMOKE_HEADING_SELECTOR` /
+`QAFF_WEB_SMOKE_HEADING_TEXT` / `QAFF_WEB_SMOKE_ITEM_SELECTOR` (what the smoke expects on the
+first screen); `qaff doctor --project .` reports whether each target answers. These apps
+have no bundled fixture — switch `web.target` back to `fixture` and regenerate to get one.
 
 ## Writing your first test
 
