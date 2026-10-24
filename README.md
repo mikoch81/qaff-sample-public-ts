@@ -44,8 +44,8 @@ that URL is reachable — replace a placeholder such as `https://example.invalid
 
 Override at runtime with `QAFF_WEB_BASE_URL` (URL) and `QAFF_WEB_SMOKE_HEADING_SELECTOR` /
 `QAFF_WEB_SMOKE_HEADING_TEXT` / `QAFF_WEB_SMOKE_ITEM_SELECTOR` (what the smoke expects on the
-first screen); `qaff doctor --project .` reports whether each target answers. These apps
-have no bundled fixture — switch `web.target` back to `fixture` and regenerate to get one.
+first screen); `qaff doctor --project .` reports whether each target answers. To run the same
+smoke offline against the bundled fixture instead: `QAFF_WEB_TARGET=fixture npm test`.
 
 ## Writing your first test
 

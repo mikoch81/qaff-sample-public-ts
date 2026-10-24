@@ -122,6 +122,10 @@
         "sha256": "7b746facdd14aa1ddcfa8ca1b5953e7ae1fe6deb7db3983efeabcd3b355f08f2"
       },
       {
+        "path": ".gitattributes",
+        "sha256": "52e87240f800e3270f39dcb05c18dc5fef71e5a004ec8ca469ca09935c51201d"
+      },
+      {
         "path": ".github/workflows/playwright.yml",
         "sha256": "0fcb401acc5e7b9cc309ab8bec8796316aaaf2b4b52c8e1edbf45e77538a5a61"
       },
@@ -146,20 +150,28 @@
         "sha256": "45f8853bd0ec73f1b21bbbd465308c53a9e650f5aba286ff21f97ce81c888848"
       },
       {
+        "path": "apps/demo-todo/web-desktop/fixtures/demo-todo.html",
+        "sha256": "f9bd449d54de044b485aa62a8eb648082022af4618e4b8f61fc2ed2ccf82fbf2"
+      },
+      {
         "path": "apps/demo-todo/web-desktop/package.json",
         "sha256": "54c985135268dbc34ead9eb58540f87fc7c2290c90e3fb4603dcdc0d32ae7ba1"
       },
       {
         "path": "apps/demo-todo/web-desktop/pages/DemoTodoHomePage.ts",
-        "sha256": "4f64f4f32f65cb20d989d3b659a2457df06014285939cbb2047d14b0f10e8216"
+        "sha256": "5e6d868b86778f1549b178bd503c580ebb5641f7a5f48dca198deb2578a571a9"
       },
       {
         "path": "apps/demo-todo/web-desktop/tests/smoke.spec.ts",
-        "sha256": "b94217b73e32eeb3ba49715034f29533bfada17c65f0d7b1be80d5aaca7e8155"
+        "sha256": "f521ed9395af131264d69477921c36f0c8698237ef6aa0609f32f4d2ec9c0197"
       },
       {
         "path": "apps/demo-todo/web-desktop/tsconfig.json",
         "sha256": "975688d879e6c5db139b6a981b658ac5b267b763b49138d442eb543dbd627c48"
+      },
+      {
+        "path": "apps/demo-todo/web-mobile/fixtures/demo-todo.html",
+        "sha256": "662b44ba20f6fcfd7759a61693f820eea191bfd96c92c7d1b615bdf0e99fba7b"
       },
       {
         "path": "apps/demo-todo/web-mobile/package.json",
@@ -167,11 +179,11 @@
       },
       {
         "path": "apps/demo-todo/web-mobile/pages/DemoTodoMobileHomePage.ts",
-        "sha256": "ab2cbbcceb1fc6e7936db55bd02698b4b4667ab6ccc0ea5eb153c326bc1ec970"
+        "sha256": "84bacee03cbaeb5c979eee08229a6ab2b5dd159102f33a7b63df2bd8d638c371"
       },
       {
         "path": "apps/demo-todo/web-mobile/tests/smoke.spec.ts",
-        "sha256": "8e6d490a3b9b8eaa387aeb6c9b3c09bbd9be01217d322bd78a85283b29117426"
+        "sha256": "b9a6d562e989406b927d87f88d6c6a78e1b633b3f0b50d846eb5b01746333bd4"
       },
       {
         "path": "apps/demo-todo/web-mobile/tsconfig.json",
@@ -287,7 +299,7 @@
       },
       {
         "path": "README.md",
-        "sha256": "df1f3139f37964eef1ecf1635cd833e806352e09ce9c4461cfe4e5b149d22754"
+        "sha256": "8f0b68153265585dbcc8099726d76b83dcee970ae43f2479f1e92e3eb37dd290"
       },
       {
         "path": "scripts/run-k6-import-smoke.ps1",
